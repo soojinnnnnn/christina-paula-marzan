@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,600&display=swap');
+
+
+
+/* Style the body and heading */
+body {
+    background-color: #FADBD8 ;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Style images and videos */
+img {
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin: 10px auto;
+    
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Style buttons */
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #D98880;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+header {
+    background-color: #E6B0AA;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav {
+    background-color: #E6B0AA;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}

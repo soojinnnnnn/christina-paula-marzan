@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image and Video Gallery</title>
+    <link rel="stylesheet" href="Marzan.css">
+</head>
+<body>
+
+    <header>
+        <h1>KOREAN SERIES</h1>
+    </header>
+    <nav>
+         <h2>Images | Videos</h2>
+    </nav>
+
+    <div class="row">
+        <div class="column">
+    <img id="image1" src="1.jpg" alt="Image 1">
+    <button onclick="changeImage('image1', '2.jpg')">Change Image 1</button>
+    </div>
+  <div class="column">
+    <img id="image2" src="3.jpg" alt="Image 2">
+    <button onclick="changeImage('image2', '4.jpg')">Change Image 2</button>
+    </div>
+  <div class="column">
+    <img id="image3" src="5.jpg" alt="Image 3">
+    <button onclick="changeImage('image3', '6.jpg')">Change Image 3</button>
+     </div>
+</div>
+
+    <h2>Videos</h2>
+
+    <div class="row">
+        <div class="column">
+    <video id="video1" controls>
+        <source src="v1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button onclick="changeVideo('video1', 'v2.mp4')">Change Video 1</button>
+     </div>
+  <div class="column">
+    <video id="video2" controls>
+        <source src="v3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button onclick="changeVideo('video2', 'v4.mp4')">Change Video 2</button>
+     </div>
+  <div class="column">
+    <video id="video3" controls>
+        <source src="v5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button onclick="changeVideo('video3', 'v6.mp4')">Change Video 3</button>
+</div>
+ </div>
+  
+    <script>
+        function changeImage(imageId, newImageSrc) {
+            document.getElementById(imageId).src = newImageSrc;
+        }
+
+        function changeVideo(videoId, newVideoSrc) {
+            var video = document.getElementById(videoId);
+            video.src = newVideoSrc;
+            video.load(); // Load the new video source
+        }
+    </script>
+</body>
+</html>
+

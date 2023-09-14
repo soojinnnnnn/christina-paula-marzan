@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unique Event Website</title>
+    <style>
+        /* Add unique CSS styles here */
+        body {
+            background-color: #f0f0f0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #event-div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button, input, select, p, div {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        div {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .animated {
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes animateResize {
+            0% {
+                width: 100px;
+                height: 100px;
+            }
+            50% {
+                width: 150px;
+                height: 150px;
+            }
+            100% {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="event-div">
+        <button id="click-button">Click Me</button>
+        <input type="text" id="blur-input" placeholder="Blur Event">
+        <select id="change-select">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+        </select>
+        <p id="double-click-para">Double Click Me</p>
+        <input type="text" id="focus-in-input" placeholder="Focus In Event">
+        <input type="text" id="focus-out-input" placeholder="Focus Out Event">
+        <div id="mouse-over-div">Mouse Over Me</div>
+        <div id="resize-div" class="animated">Resize Me</div>
+        <div id="animation-div" class="animated">Animation</div>
+    </div>
+
+    <script>
+        // JavaScript event handlers
+        document.getElementById('click-button').addEventListener('click', function() {
+            alert('Button was clicked!');
+        });
+
+        document.getElementById('blur-input').addEventListener('blur', function() {
+            this.style.backgroundColor = '#f39c12';
+        });
+
+        document.getElementById('double-click-para').addEventListener('dblclick', function() {
+            this.innerHTML = 'Double Clicked!';
+        });
+
+        document.getElementById('focus-in-input').addEventListener('focusin', function() {
+            this.style.borderColor = '#27ae60';
+        });
+
+        document.getElementById('focus-out-input').addEventListener('focusout', function() {
+            this.style.borderColor = '#e74c3c';
+        });
+
+        document.getElementById('mouse-over-div').addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#9b59b6';
+        });
+
+        window.addEventListener('resize', function() {
+            document.getElementById('resize-div').style.animation = 'animateResize 2s ease-in-out';
+        });
+
+        document.getElementById('animation-div').addEventListener('animationstart', function() {
+            this.innerHTML = 'Animation Started!';
+        });
+
+        document.getElementById('animation-div').addEventListener('animationend', function() {
+            this.innerHTML = 'Animation Ended!';
+        });
+    </script>
+</body>
+</html>
